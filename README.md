@@ -40,28 +40,35 @@ Como sabemos y hemos visto es una opción eficiente y versátil para problemas e
 
 ---
 
-## 🧪 Metodología aplicada
+## Metodología aplicada
 
-1. **Análisis exploratorio**  
-   - Correlación entre variables
-   - Estadísticas generales
+1. **Análisis exploratorio**
+Se realizó un análisis inicial para entender mejor los datos y sus características:
+   - Correlación entre variables: Se utilizó df.corr() para calcular la matriz de correlación, junto con sns.heatmap() para visualizarla y detectar relaciones fuertes entre las variables.
+   - Estadísticas generales: Se aplicaron funciones como df.describe() y df.info() para obtener un resumen de los datos, tipos de variables y posibles valores atípicos o faltantes.
 
 2. **Preprocesamiento**
-   - Codificación de variables categóricas
-   - Normalización de variables numéricas
-   - Generación de variable binaria (`aprobado`)
+Se prepararon los datos para que pudieran ser utilizados por el modelo de clasificación:
+   - Codificación de variables categóricas: Se usó pd.get_dummies() para convertir variables como “school”, “sex”, “guardian”, entre otras, en variables numéricas.
+   - Normalización de variables numéricas: Se aplicó StandardScaler() de sklearn.preprocessing para escalar las variables numéricas a una misma escala.
+   - Generación de la variable binaria objetivo (aprobado): Se creó una nueva columna donde 1 representa que el estudiante aprobó (nota final G3 ≥ 10) y 0 si reprobó.
 
 3. **Selección de variables**
-   - Se analizaron las características más relevantes con `feature_importances_` del modelo
+Para identificar las características con mayor valor predictivo:
+   - Se entrenó un modelo RandomForestClassifier() de sklearn.ensemble sobre los datos preprocesados.
+   - Se extrajeron las importancias de cada variable con el atributo feature_importances_.
+   - Se visualizaron los resultados mediante sns.barplot(x=importances, y=feat_names) para detectar fácilmente qué variables eran más relevantes.
+Las variables más importantes según este análisis fueron: G1, G2, absences, studytime y failures, lo que muestra que el desempeño previo y el compromiso académico son claves en la predicción del resultado final.
 
 4. **Entrenamiento**
-   - Modelo: `RandomForestClassifier`
-   - División `train/test`: 80% / 20%
-   - Métrica principal: Accuracy
+Con los datos ya procesados, se procedió a entrenar el modelo predictivo:
+   - Modelo seleccionado: RandomForestClassifier por su capacidad de manejar relaciones no lineales y su robustez frente a variables irrelevantes.
+   - División de datos: Se aplicó train_test_split() (de sklearn.model_selection) con un 80% para entrenamiento y 20% para prueba.
+   - Métrica de evaluación principal: Se utilizó accuracy_score() para medir el desempeño general del modelo.
 
 5. **Evaluación**
-   - Matriz de confusión
-   - Precisión, recall y F1-score
+   - Se generó la matriz de confusión con confusion_matrix() y se visualizó usando ConfusionMatrixDisplay().
+   - Se calculó el reporte de clasificación con classification_report() que entrega métricas como precisión, recall y F1-score para cada clase (aprobado/reprobado).
 
 ---
 
@@ -82,14 +89,7 @@ Esto indica que el desempeño previo y el compromiso académico tienen gran valo
 
 ## 📌 Conclusiones
 
-Con esto ya tenemos nuestras conclusiones que son:
-1. El modelo desarrollado predice con alta precisión si un estudiante aprobará, lo cual permite identificar tempranamente casos de riesgo académico.
-2. Las notas parciales (G1 y G2) resultaron ser los indicadores más determinantes, confirmando que el desempeño previo es clave para anticipar el resultado final.
-3. Este tipo de modelos puede ser una valiosa herramienta de apoyo para docentes, orientadores o equipos directivos, facilitando intervenciones preventivas y focalizadas.
-4. A futuro, se podría complementar con modelos más complejos o con datos longitudinales para reforzar la capacidad predictiva y adaptarlo a distintos contextos educativos.
-
-En síntesis:
-Este proyecto demuestra que la inteligencia artificial, aplicada de forma ética y responsable, puede ser una aliada poderosa para la toma de decisiones pedagógicas basadas en datos concretos y reales.
+El modelo desarrollado logró predecir con alta precisión si un estudiante aprobará, permitiendo identificar tempranamente casos de riesgo académico. Las notas parciales (G1 y G2) destacaron como los indicadores más determinantes, lo que confirma que el desempeño previo es clave en el resultado final. Esta herramienta puede servir de apoyo para docentes y equipos educativos, facilitando intervenciones preventivas y focalizadas. A futuro, podría complementarse con modelos más complejos o datos longitudinales para reforzar su capacidad predictiva. En definitiva, este proyecto demuestra que la inteligencia artificial, aplicada de forma ética y responsable, puede ser una aliada poderosa en la toma de decisiones pedagógicas basadas en datos reales.
 
 ---
 
