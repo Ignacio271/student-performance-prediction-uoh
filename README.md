@@ -1,4 +1,4 @@
-# Proyecto Final - Predicción del Rendimiento Estudiantil
+# Proyecto Final - Predicción del Rendimiento Estudiantil (IIA-UOH)
 
 **Final project for the Introduction to AI course (UOH)**  
 Este proyecto tiene como objetivo predecir si un estudiante aprobará o no su curso final, utilizando técnicas de **clasificación supervisada** a partir de características académicas y sociodemográficas.
@@ -67,16 +67,13 @@ Como sabemos y hemos visto es una opción eficiente y versátil para problemas e
 
 ## 🧠 Resultados obtenidos
 
-- **F1-score**:
-  - Aprobados: 0.92
-  - Reprobados: 0.86
-- **Accuracy**: 0.90  
-- **Precision**:
-  - Aprobados: 94%
-  - Reprobados: 83%
-- **Recall**:
-  - Aprobados: 90%
-  - Reprobados: 89%
+| Métrica     | Aprobados | Reprobados |
+|-------------|-----------|------------|
+| Precision   | 94%       | 83%        |
+| Recall      | 90%       | 89%        |
+| F1-Score    | 0.92      | 0.86       |
+| Accuracy    | 0.90      | -          |
+
 
 Las variables más relevantes fueron `G1`, `G2`, `absences`, `studytime` y `failures`.  
 Esto indica que el desempeño previo y el compromiso académico tienen gran valor predictivo.
@@ -86,11 +83,13 @@ Esto indica que el desempeño previo y el compromiso académico tienen gran valo
 ## 📌 Conclusiones
 
 Con esto ya tenemos nuestras conclusiones que son:
-1. El modelo predice con alta precisión si un estudiante aprobará, lo cual puede ayudar a detectar casos de riesgo.
-2. Las notas parciales (G1 y G2) son los indicadores más importantes para anticipar el resultado final.
-3. Este tipo de modelos podría ser útil como herramienta de apoyo para docentes, orientadores o equipos directivos, facilitando intervenciones preventivas.
-4. A futuro, podrían complementarse con modelos más complejos o con datos longitudinales para reforzar la capacidad predictiva.
+1. El modelo desarrollado predice con alta precisión si un estudiante aprobará, lo cual permite identificar tempranamente casos de riesgo académico.
+2. Las notas parciales (G1 y G2) resultaron ser los indicadores más determinantes, confirmando que el desempeño previo es clave para anticipar el resultado final.
+3. Este tipo de modelos puede ser una valiosa herramienta de apoyo para docentes, orientadores o equipos directivos, facilitando intervenciones preventivas y focalizadas.
+4. A futuro, se podría complementar con modelos más complejos o con datos longitudinales para reforzar la capacidad predictiva y adaptarlo a distintos contextos educativos.
 
+En síntesis:
+Este proyecto demuestra que la inteligencia artificial, aplicada de forma ética y responsable, puede ser una aliada poderosa para la toma de decisiones pedagógicas basadas en datos concretos y reales.
 
 ---
 
