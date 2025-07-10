@@ -1,7 +1,7 @@
 # Proyecto Final - Predicción del Rendimiento Estudiantil (IIA-UOH)
 
 **Final project for the Introduction to AI course (UOH)**  
-Este proyecto tiene como objetivo predecir si un estudiante aprobará o no su curso final, utilizando técnicas de **clasificación supervisada** a partir de características académicas y sociodemográficas.
+La elección de este tema fue motivado por vivencias personales y de mi entorno. Este proyecto tiene como objetivo predecir si un estudiante aprobará o no su curso final para diseñar estrategias de apoyo al estudiante, utilizando técnicas de **clasificación supervisada** a partir de características académicas y sociodemográficas.
 
 ---
 
