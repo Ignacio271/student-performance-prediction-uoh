@@ -5,13 +5,13 @@ La elección de este tema fue motivado por vivencias personales y de mi entorno.
 
 ---
 
-## Descripción del problema 📌
+## Descripción del problema 
 
 El rendimiento académico de los estudiantes está influenciado por múltiples factores: personales, familiares y escolares. Poder anticipar el riesgo de reprobación permite diseñar estrategias de apoyo temprano, reducir la deserción y mejorar el desempeño global del curso.
 
 ---
 
-## 📊 Dataset y fuente (link de Kaggle)
+## Dataset y fuente (link de Kaggle)
 
 El dataset fue extraído desde [Kaggle](https://www.kaggle.com/datasets/henryshan/student-performance-prediction) y contiene información de 395 estudiantes de educación secundaria. Algunas variables incluidas son:
 
@@ -27,7 +27,7 @@ La variable objetivo se definió como:
 
 ---
 
-## 🤖 Justificación del modelo
+## Justificación del modelo
 
 Se utilizó `RandomForestClassifier` por su capacidad para:
 
@@ -72,7 +72,7 @@ Con los datos ya procesados, se procedió a entrenar el modelo predictivo:
 
 ---
 
-## 🧠 Resultados obtenidos
+## Resultados obtenidos
 
 | Métrica     | Aprobados | Reprobados |
 |-------------|-----------|------------|
@@ -87,13 +87,13 @@ Esto indica que el desempeño previo y el compromiso académico tienen gran valo
 
 ---
 
-## 📌 Conclusiones
+## Conclusiones
 
 El modelo desarrollado logró predecir con alta precisión si un estudiante aprobará, permitiendo identificar tempranamente casos de riesgo académico. Las notas parciales (G1 y G2) destacaron como los indicadores más determinantes, lo que confirma que el desempeño previo es clave en el resultado final. Esta herramienta puede servir de apoyo para docentes y equipos educativos, facilitando intervenciones preventivas y focalizadas. A futuro, podría complementarse con modelos más complejos o datos longitudinales para reforzar su capacidad predictiva. En definitiva, este proyecto demuestra que la inteligencia artificial, aplicada de forma ética y responsable, puede ser una aliada poderosa en la toma de decisiones pedagógicas basadas en datos reales.
 
 ---
 
-## 📂 Estructura del repositorio
+## Estructura del repositorio
 
 La estructura de este repo es la siguiente:
 ```
@@ -106,7 +106,7 @@ La estructura de este repo es la siguiente:
 
 ---
 
-## 🛠️ Requisitos
+## Requisitos
 
 Instalar las dependencias desde el archivo `environment.yml`:
 
@@ -117,6 +117,6 @@ conda activate student-perf
 
 ---
 
-## 👥 Integrantes
+## Integrantes
 
 - Ignacio Esteban Concha Pavez – Universidad de O’Higgins
